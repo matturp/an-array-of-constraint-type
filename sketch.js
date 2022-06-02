@@ -129,15 +129,15 @@ recognition.onresult = function(event) {
 
   // RANDOMISE FONTS
 
-  // document.body.className = random(['font-0','font-1','font-2','font-3','font-4']);
+  document.body.className = random(['font-0','font-1','font-2','font-3','font-4']);
   
   // DISPLAY FONTS IN SEQUENCE
 
-  document.body.className = `font-${font}`;
-  font++;
-  font = font % 5;
+//   document.body.className = `font-${font}`;
+//   font++;
+//   font = font % 5;
 
-  recognitionBusy = false;
+//   recognitionBusy = false;
 }
 
 
@@ -192,12 +192,6 @@ function draw() {
   let rHighMid = map(highMid, 0, 50, 0, 20);
   let rTreble = map(treble, 0, 20, 0, 20);
 
-  // stroke(50);
-  // fill(240,200);
-  // circle(width/2 - 150, 100, rLowMid);
-  // circle(width/2 - 50, 100, rMid);
-  // circle(width/2  + 50, 100, rHighMid);
-  // circle(width/2 + 150, 100, rTreble);
 
   fill(255,100);
   strokeWeight(2);
