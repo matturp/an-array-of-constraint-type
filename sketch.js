@@ -367,29 +367,7 @@ async function initialiseScreenCapture() {
 }
 
 function saveType() {
-  console.log("mousePressed");
-
-  try {
-    // context.drawImage(video, 0, 0, window.width, window.height)
-    // TODO: I hard-coded this because I can't find the right versions of
-    // window.height/innerHeight/outerHeight or whatever to get it to work.
-    context.drawImage(video, 0, 0, 1920, 1080);
-    const image = canvas.toDataURL();
-
-    // Create a new link/a tag.
-    const link = document.createElement("a");
-
-    // Add the base64 string as the destination of the link,
-    // plus some other properties for downloading.
-    link.target = "_blank";
-    link.download = "img.png";
-    link.href = image;
-
-    // Click it. Automagically.
-    link.click();
-  } catch (err) {
-    console.error("Error: " + err);
-  }
+  window.dispatchEvent(new Event("takeScreenshot"));
 }
 
 function windowResized() {
