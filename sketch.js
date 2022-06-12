@@ -84,10 +84,10 @@ function setup() {
   mic.start();
   fft.setInput(mic);
 
-  // button = createButton('Save');
-  // button.position(width - 120, 15);
-  // button.style('background-color: whitesmoke;' + 'border: none;' + 'color: #081c15;' + 'padding: 15px 32px;' + 'font-family: handjet;' + 'font-size: 14pt;' + 'transition-duration: 0.4s');
-  // button.mousePressed(saveType);
+  button = createButton('Save');
+  button.position(width - 120, 15);
+  button.style('background-color: whitesmoke;' + 'border: none;' + 'color: #081c15;' + 'padding: 15px 32px;' + 'font-family: handjet;' + 'font-size: 14pt;' + 'transition-duration: 0.4s');
+  button.mousePressed(saveType);
   
   variable = select('.variable');
   //initialiseScreenCapture();
